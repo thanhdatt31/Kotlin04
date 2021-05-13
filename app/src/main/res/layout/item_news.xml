@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="6dp"
+    android:layout_marginBottom="20dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_avatar_customer_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/image_news_1"
+            card_view:layout_constraintLeft_toLeftOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/raleway_regular"
+            android:text="ALT -3,87%"
+            android:textColor="#f00909"
+            android:textSize="10sp"
+            android:textStyle="normal"
+            android:layout_marginTop="10dp"
+            card_view:layout_constraintLeft_toRightOf="@id/img_avatar_customer_2"
+            card_view:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:fontFamily="@font/lato_light"
+            android:text="3 Sept 2020"
+            android:textColor="#080808"
+            android:textSize="10sp"
+            android:layout_marginTop="10dp"
+            android:textStyle="normal"
+            card_view:layout_constraintLeft_toRightOf="@id/tv_percent"
+            card_view:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/raleway_black"
+            android:text="ATLANTIA"
+            android:textColor="#2e2e2e"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            card_view:layout_constraintLeft_toLeftOf="@id/tv_percent"
+            card_view:layout_constraintTop_toBottomOf="@id/tv_percent" />
+
+        <TextView
+            android:id="@+id/tv_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/lato_light"
+            android:text="Illum velit nam voluptatum enim aut"
+            android:textColor="#000000"
+            android:textSize="10sp"
+            android:textStyle="normal"
+            card_view:layout_constraintLeft_toLeftOf="@id/tv_title"
+            card_view:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+        <TextView
+            android:id="@+id/tv_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_light"
+            android:text="ratione ratione officiis totam."
+            android:textColor="#000000"
+            android:textSize="10sp"
+            android:textStyle="normal"
+            card_view:layout_constraintLeft_toLeftOf="@id/tv_one"
+            card_view:layout_constraintTop_toBottomOf="@id/tv_one" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_light"
+            android:text="Mollitia eum sint tempora ducimus"
+            android:textColor="#000000"
+            android:textSize="10sp"
+            android:textStyle="normal"
+            card_view:layout_constraintLeft_toLeftOf="@id/tv_two"
+            card_view:layout_constraintTop_toBottomOf="@id/tv_two" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="6dp"
+            android:src="@drawable/ic_gruppo_di_maschere_1_clipped"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintRight_toRightOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

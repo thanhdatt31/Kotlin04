@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/img_bg_avatar"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/custom_avatar_customer"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_title_customer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway_medium"
+        android:paddingStart="20dp"
+        android:text="Alerts"
+        android:textColor="#454545"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@id/img_bg_avatar"
+        app:layout_constraintLeft_toRightOf="@id/img_bg_avatar"
+        app:layout_constraintTop_toTopOf="@id/img_bg_avatar" />
+
+    <ImageView
+        android:id="@+id/img_avatar_customer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icons_8_alarm"
+        app:layout_constraintBottom_toBottomOf="@id/img_bg_avatar"
+        app:layout_constraintLeft_toLeftOf="@id/img_bg_avatar"
+        app:layout_constraintRight_toRightOf="@id/img_bg_avatar"
+        app:layout_constraintTop_toTopOf="@id/img_bg_avatar" />
+
+    <View
+        android:id="@+id/customer_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="#434343"
+        android:visibility="invisible"
+        android:alpha="0.08"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_avatar_customer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConfirmPassActivity">
+
+    <ImageView
+        android:id="@+id/img_bg_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/ic_componente_6_7"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway_black"
+        android:paddingEnd="10dp"
+        android:text="TRADIX"
+        android:textColor="#2b2828"
+        android:textSize="30sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@id/img_bg_top"
+        app:layout_constraintLeft_toLeftOf="@id/img_bg_top"
+        app:layout_constraintRight_toRightOf="@id/img_bg_top"
+        app:layout_constraintTop_toTopOf="@id/img_bg_top"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_coin"
+        app:layout_constraintBottom_toBottomOf="@id/tv_title"
+        app:layout_constraintLeft_toRightOf="@id/tv_title"
+        app:layout_constraintTop_toTopOf="@id/tv_title" />
+
+    <TextView
+        android:id="@+id/tv_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway_black"
+        android:text="Yay! Your password has been"
+        android:textColor="#656565"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@id/img_bg_top"
+        app:layout_constraintLeft_toLeftOf="@id/img_bg_top"
+        app:layout_constraintRight_toRightOf="@id/img_bg_top" />
+
+    <TextView
+        android:id="@+id/tv_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway_black"
+        android:text="changed!"
+        android:textColor="#656565"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        app:layout_constraintLeft_toLeftOf="@id/tv_one"
+        app:layout_constraintRight_toRightOf="@id/tv_one"
+        app:layout_constraintTop_toBottomOf="@id/tv_one" />
+
+    <TextView
+        android:id="@+id/tv_three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/lato_light"
+        android:text="You can now log into your account"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintLeft_toLeftOf="@id/tv_two"
+        app:layout_constraintRight_toRightOf="@id/tv_two"
+        app:layout_constraintTop_toBottomOf="@id/tv_two" />
+
+    <TextView
+        android:id="@+id/tv_four"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato_light"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintLeft_toLeftOf="@id/tv_three"
+        app:layout_constraintRight_toRightOf="@id/tv_three"
+        app:layout_constraintTop_toBottomOf="@id/tv_three"
+        tools:text="with the new password" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/ic_componente_4_3"
+        app:layout_constraintBottom_toBottomOf="@id/img_deals"
+        app:layout_constraintLeft_toLeftOf="@id/img_deals"
+        app:layout_constraintRight_toRightOf="@id/img_deals"
+        app:layout_constraintTop_toTopOf="@id/img_deals"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <ImageView
+        android:id="@+id/img_deals"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_pixeltrue_special_deals"
+        app:layout_constraintHeight_percent="0.55"
+        app:layout_constraintTop_toBottomOf="@id/tv_two" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_flying_coins"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintLeft_toLeftOf="@id/img_deals"
+        app:layout_constraintRight_toRightOf="@id/img_deals"
+        app:layout_constraintTop_toBottomOf="@id/tv_four" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_flying_coins_2"
+        app:layout_constraintHorizontal_bias="0.85"
+        app:layout_constraintLeft_toLeftOf="@id/img_deals"
+        app:layout_constraintRight_toRightOf="@id/img_deals"
+        app:layout_constraintTop_toBottomOf="@id/tv_four" />
+
+    <Button
+        android:id="@+id/btn_resend"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/custom_button_confirm"
+        android:fontFamily="@font/lato_black"
+        android:text="LOGIN"
+        android:textSize="14sp"
+        app:backgroundTint="@null"
+        app:layout_constraintHeight_percent="0.075"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_deals"
+        app:layout_constraintWidth_percent="0.6" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

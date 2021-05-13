@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OnboardingActivity">
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/btn_next"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".08" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".13" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_right_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".87" />
+
+    <TextView
+        android:id="@+id/tv_skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:fontFamily="@font/lato_regular"
+        android:text="Skip"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_top"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_arrow_back_ios_24"
+        app:layout_constraintBottom_toBottomOf="@id/tv_skip"
+        app:layout_constraintRight_toLeftOf="@id/guideline_left"
+        app:layout_constraintTop_toTopOf="@id/tv_skip" />
+
+    <ImageView
+        android:id="@+id/indicator_1"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/indicator_default"
+        app:layout_constraintBottom_toBottomOf="@id/btn_next"
+        app:layout_constraintLeft_toLeftOf="@id/guideline_left"
+        app:layout_constraintTop_toTopOf="@id/btn_next" />
+
+    <ImageView
+        android:id="@+id/indicator_1_selected"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:src="@drawable/indicator_selected"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/btn_next"
+        app:layout_constraintLeft_toLeftOf="@id/guideline_left"
+        app:layout_constraintRight_toLeftOf="@id/indicator_2"
+        app:layout_constraintTop_toTopOf="@id/btn_next" />
+
+    <ImageView
+        android:id="@+id/indicator_2"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/indicator_default"
+        app:layout_constraintBottom_toBottomOf="@id/btn_next"
+        app:layout_constraintLeft_toRightOf="@id/indicator_1"
+        app:layout_constraintRight_toLeftOf="@id/indicator_3"
+        app:layout_constraintTop_toTopOf="@id/btn_next" />
+
+    <ImageView
+        android:id="@+id/indicator_2_selected"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:src="@drawable/indicator_selected"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/btn_next"
+        app:layout_constraintLeft_toRightOf="@id/indicator_1"
+        app:layout_constraintRight_toLeftOf="@id/indicator_3"
+        app:layout_constraintTop_toTopOf="@id/btn_next" />
+
+    <ImageView
+        android:id="@+id/indicator_3"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/indicator_default"
+        app:layout_constraintBottom_toBottomOf="@id/btn_next"
+        app:layout_constraintLeft_toRightOf="@id/indicator_2"
+        app:layout_constraintTop_toTopOf="@id/btn_next" />
+
+    <ImageView
+        android:id="@+id/indicator_3_selected"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:src="@drawable/indicator_selected"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/btn_next"
+        app:layout_constraintLeft_toRightOf="@id/indicator_2"
+        app:layout_constraintTop_toTopOf="@id/btn_next" />
+
+    <ImageView
+        android:id="@+id/btn_next"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="30dp"
+        android:src="@drawable/button_first_screen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.06"
+        app:layout_constraintRight_toRightOf="@id/guideline_right_btn"
+        app:layout_constraintWidth_percent="0.25" />
+
+    <TextView
+        android:id="@+id/tv_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato_black"
+        android:text="NEXT"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="@id/btn_next"
+        app:layout_constraintLeft_toLeftOf="@id/btn_next"
+        app:layout_constraintRight_toRightOf="@id/btn_next"
+        app:layout_constraintTop_toTopOf="@id/btn_next" />
+</androidx.constraintlayout.widget.ConstraintLayout>

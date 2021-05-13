@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity"
+    android:id="@+id/home_layout">
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/bottom_nav"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <View
+        android:id="@+id/bottom_nav_bg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#f8f8f8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <View
+        android:id="@+id/bottom_nav"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/custom_bottom_nav_home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ImageView
+        android:id="@+id/indicator_increase"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/custom_bg_icon"
+        app:layout_constraintBottom_toBottomOf="@id/ic_increase_checked"
+        app:layout_constraintLeft_toLeftOf="@id/ic_increase_checked"
+        app:layout_constraintRight_toRightOf="@id/ic_increase_checked"
+        app:layout_constraintTop_toTopOf="@id/ic_increase_checked" />
+
+    <ImageView
+        android:id="@+id/ic_increase_checked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="10dp"
+        android:paddingTop="3dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="3dp"
+        android:src="@drawable/icons_8_increase"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_nav"
+        app:layout_constraintLeft_toLeftOf="@id/bottom_nav"
+        app:layout_constraintRight_toLeftOf="@id/ic_chart_unchecked"
+        app:layout_constraintTop_toTopOf="@id/bottom_nav" />
+
+    <ImageView
+        android:id="@+id/ic_increase_unchecked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="10dp"
+        android:paddingTop="3dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="3dp"
+        android:src="@drawable/icons_8_increase_unchecked"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_nav"
+        app:layout_constraintLeft_toLeftOf="@id/bottom_nav"
+        app:layout_constraintRight_toLeftOf="@id/ic_chart_unchecked"
+        app:layout_constraintTop_toTopOf="@id/bottom_nav" />
+
+    <ImageView
+        android:id="@+id/indicator_chart"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/custom_bg_icon"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/ic_chart_checked"
+        app:layout_constraintLeft_toLeftOf="@id/ic_chart_checked"
+        app:layout_constraintRight_toRightOf="@id/ic_chart_checked"
+        app:layout_constraintTop_toTopOf="@id/ic_chart_checked" />
+
+    <ImageView
+        android:id="@+id/ic_chart_unchecked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="10dp"
+        android:paddingTop="3dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="3dp"
+        android:src="@drawable/icons_8_chart"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_nav"
+        app:layout_constraintLeft_toRightOf="@id/ic_increase_checked"
+        app:layout_constraintRight_toLeftOf="@id/ic_news_unchecked"
+        app:layout_constraintTop_toTopOf="@id/bottom_nav" />
+
+    <ImageView
+        android:id="@+id/ic_chart_checked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="10dp"
+        android:paddingTop="3dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="3dp"
+        android:src="@drawable/icons_8_chart_checked"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_nav"
+        app:layout_constraintLeft_toRightOf="@id/ic_increase_checked"
+        app:layout_constraintRight_toLeftOf="@id/ic_news_unchecked"
+        app:layout_constraintTop_toTopOf="@id/bottom_nav" />
+
+
+    <ImageView
+        android:id="@+id/indicator_news"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/custom_bg_icon"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/ic_news_unchecked"
+        app:layout_constraintLeft_toLeftOf="@id/ic_news_unchecked"
+        app:layout_constraintRight_toRightOf="@id/ic_news_unchecked"
+        app:layout_constraintTop_toTopOf="@id/ic_news_unchecked" />
+
+    <ImageView
+        android:id="@+id/ic_news_unchecked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="10dp"
+        android:paddingTop="3dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="3dp"
+        android:src="@drawable/icons_8_news"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_nav"
+        app:layout_constraintLeft_toRightOf="@id/ic_chart_unchecked"
+        app:layout_constraintRight_toLeftOf="@id/ic_customer_unchecked"
+        app:layout_constraintTop_toTopOf="@id/bottom_nav" />
+
+    <ImageView
+        android:id="@+id/indicator_customer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/custom_bg_icon"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/ic_customer_unchecked"
+        app:layout_constraintLeft_toLeftOf="@id/ic_customer_unchecked"
+        app:layout_constraintRight_toRightOf="@id/ic_customer_unchecked"
+        app:layout_constraintTop_toTopOf="@id/ic_customer_unchecked" />
+
+    <ImageView
+        android:id="@+id/ic_customer_unchecked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="10dp"
+        android:paddingTop="3dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="3dp"
+        android:src="@drawable/icons_8_customer"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_nav"
+        app:layout_constraintLeft_toRightOf="@id/ic_news_unchecked"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/bottom_nav" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
