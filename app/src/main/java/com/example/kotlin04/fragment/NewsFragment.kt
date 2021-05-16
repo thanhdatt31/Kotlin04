@@ -42,26 +42,9 @@ class NewsFragment : Fragment() {
             transaction.commit()
             view.tv_menu.text = "EDITORIAL NEWS"
         }
-//        callback2 = object : OnBackPressedCallback(true) {
-//            override fun handleOnBackPressed() {
-//                view.tv_menu.text = "NEWS"
-//
-//            }
-//
-//        }
-//        requireActivity().onBackPressedDispatcher.addCallback(callback2 as OnBackPressedCallback)
         return view
     }
 
-    override fun onPause() {
-        callback2?.remove()
-        super.onPause()
-    }
-
-    override fun onResume() {
-//        requireActivity().onBackPressedDispatcher.addCallback(callback2 as OnBackPressedCallback)
-        super.onResume()
-    }
 
     private fun addDumpData() {
         listNews.add(News("ATLANTIA", "ALT -3,87%", R.drawable.image_news_1))
